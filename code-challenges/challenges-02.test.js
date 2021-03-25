@@ -1,14 +1,18 @@
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
+
 CHALLENGE 1 - Review
 
-Write a function named replaceZeros that, given a string, uses Regex to replace all '0' with the word 'zero'. 
+Write a function named raisedToTheThird that takes in an array of numbers and returns a new array of each of those numbers raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
+
 ------------------------------------------------------------------------------------------------ */
 
-const replaceZeros = (string) => {
-  // Solution code here...
-}
+const raisedToTheThird = (arr) => {
+  const results = [];
+  arr.map(num => results.push(Math.pow(num,3)));
+  return results;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -17,8 +21,12 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  // Solution code here...
-}
+  const answer = [];
+  arr.map(value => {
+    answer.push(value + 1)
+  })
+  return answer;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -28,7 +36,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -47,7 +55,7 @@ const forLoopTwoToThe = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1, but uses forEach instead of a for loop.
+Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4, but uses forEach instead of a for loop.
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
@@ -57,7 +65,7 @@ const forEachTwoToThe = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1 and your forEachTwoToThe function from challenge 2, but uses map instead of a for loop or forEach.
+Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4 and your forEachTwoToThe function from challenge 5, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
@@ -196,9 +204,9 @@ Run your tests from the console: jest challenges-07.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
-  test('It should replace all the 0\'s with the word "zero"', () => {
-    expect(replaceZeros('301 is s0 much fun!')).toStrictEqual('3zero1 is szero much fun!');
+describe('Testing challenge 1', () => {
+  test('It should return a new array of numbers raised to the thrid power', () => {
+    expect(raisedToTheThird([2, 4, 5, -7, 0])).toStrictEqual([8, 64, 125, -343, 0]);
   });
 });
 
