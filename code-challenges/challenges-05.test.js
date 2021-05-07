@@ -35,9 +35,8 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 ------------------------------------------------------------------------------------------------ */
 
-const addPurchases = (arr) => {
-  // Solution code here...
-};
+const addPurchases = (arr) => arr.reduce((accumulator, object) => +(accumulator + object.purchasePrice), 0);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -125,7 +124,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  return str.split('').reduce((rev, char) => char + rev, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
