@@ -18,9 +18,7 @@ Write a function named firstLetters that takes in an array of strings and return
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 'w', 'w', ':']
 ------------------------------------------------------------------------------------------------ */
 
-const firstLetters = (arr) => {
-  // Solution code here...
-};
+const firstLetters = arr => arr.map((string) => string.charAt(0));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -30,9 +28,7 @@ Write a function named findHappiness that takes in an array of strings and retur
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this is great :)', ':)))))']
 ------------------------------------------------------------------------------------------------ */
 
-const findHappiness = (arr) => {
-  // Solution code here...
-};
+const findHappiness = arr => arr.filter((string) => string.includes(":)"));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -42,12 +38,17 @@ Write a function named standardizePhoneNumbers that takes in an array of phone n
 For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
-const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
-};
+const standardizePhoneNumbers = (arr) => 
+  arr.map((string) =>
+    string
+      .split('')
+      .filter((char) => /\d/.test(char))
+      .join('')
+  );
+
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named onlyOddChars that takes in a string and returns only the odd-index characters from that string.
 
@@ -55,7 +56,13 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  const oddStrArr = [];
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 !== 0) {
+      oddStrArr.push(str.charAt(i));
+    }
+  }
+  return oddStrArr.join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,7 +72,13 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  let allSmiles = true;
+  arr.forEach((str) => {
+    if (!str.includes(":)")) {
+      allSmiles = false;
+    }
+  });
+  return allSmiles;
 };
 
 /* ------------------------------------------------------------------------------------------------
