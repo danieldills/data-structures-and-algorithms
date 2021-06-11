@@ -13,3 +13,6 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 ### 401 Data Structures, Code Challenges
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+ [Code Challenge 01](python/code_challenges/array-reverse/README.md)
+ [Code Challenge 02](python/code_challenges/array-shift/README.md)
