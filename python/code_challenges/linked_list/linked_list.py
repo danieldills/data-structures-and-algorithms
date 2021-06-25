@@ -6,8 +6,8 @@ class Node:
 
 class LinkedList:
 
-    def __init__(self, node=None):
-        self.head = node
+    def __init__(self, head=None):
+        self.head = head
 
     def insert(self, value):
 
@@ -39,6 +39,27 @@ class LinkedList:
         string += f" None "
 
         return string
+
+# https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+    def kthFromEnd(self, n):
+        temp = self.head # used temp variable
+
+        length = 0
+        while temp is not None:
+            temp = temp.next
+            length += 1
+
+        # print count
+        if n > length: # if entered location is greater
+                       # than length of linked list
+            print('Location is greater than the' +
+                         ' length of LinkedList')
+            return
+        temp = self.head
+        for i in range(0, length - n):
+            temp = temp.next
+        print(temp.data)
+
 
 if __name__ == "__main__":
 
