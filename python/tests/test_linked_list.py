@@ -1,5 +1,6 @@
 from code_challenges.linked_list.linked_list import LinkedList, Node
 
+# Can successfully create a node
 def test_a():
     node1 = Node("apple")
     actual = node1.value
@@ -62,3 +63,15 @@ def test_seven():
     actual = str(ll1)
     expected = "{'d'} ->{'c'} ->{'b'} ->{'a'} -> None "
     assert actual == expected
+
+# Where k is greater than the length of the linked list
+def test_eight():
+    ll1 = LinkedList()
+
+# Where k and the length of the list are the same
+
+# Where k is not a positive integer
+
+# Where the linked list is of a size 1
+
+# “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
