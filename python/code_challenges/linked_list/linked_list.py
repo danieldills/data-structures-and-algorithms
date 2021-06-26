@@ -41,24 +41,27 @@ class LinkedList:
         return string
 
 # https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
-    def kthFromEnd(self, n):
-        temp = self.head # used temp variable
-
+    def kthFromEnd(self, k):
+        temp = self.head
         length = 0
+
         while temp is not None:
             temp = temp.next
             length += 1
 
-        # print count
-        if n > length: # if entered location is greater
-                       # than length of linked list
-            print('Location is greater than the' +
-                         ' length of LinkedList')
-            return
+        #print count
+        if k > length: # if entered location is greater than length of LL
+            return 'Location is greater than the length of LL'
+        if k == length:
+            return 'Same length'
+        if k < 0:
+            return 'Negative numbers not allowed'
+
         temp = self.head
-        for i in range(0, length - n):
+        for i in range(1, length - k):
             temp = temp.next
-        print(temp.data)
+
+        return temp.value
 
 
 if __name__ == "__main__":

@@ -45,6 +45,10 @@ Assistance from TA Anthony
 <!-- Short summary or background information -->
 Extending an Implementation
 
+## Whiteboard Process_07
+<!-- Embedded whiteboard image -->
+![Whitebaord](python/assets/kth_from_end.jpg)
+
 ## Challenge_07
 <!-- Description of the challenge -->
 - kth from end
@@ -54,4 +58,5 @@ argument: a number, k, as a parameter.
 
 ## Collaborations & Credit_07
 
+Credit Kassie Bradshaw for tests
 This lab was done with our Game of Greed group: Kassie Bradshaw, Daniel Dills, Michael Ryan, Matt Santorsola
