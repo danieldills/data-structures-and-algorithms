@@ -47,7 +47,7 @@ Extending an Implementation
 
 ## Whiteboard Process_07
 <!-- Embedded whiteboard image -->
-![Whitebaord](python/assets/kth_from_end.jpg)
+![Whitebaord](../../assets/kth_from_end.jpg)
 
 ## Challenge_07
 <!-- Description of the challenge -->
