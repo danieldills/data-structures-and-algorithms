@@ -1,5 +1,5 @@
 import pytest
-from code_challenges.linked_list.linked_list import LinkedList, Node
+from code_challenges.linked_list.linked_list import LinkedList, Node, zipped_list
 
 # pytestmark = [pytest.mark.version_1]
 
@@ -78,6 +78,7 @@ def test_seven():
 
 # Code Challenge 07 Tests
 # Where k is greater than the length of the linked list
+@pytest.mark.skip("pending")
 def test_eight():
     ll = LinkedList(Node(1, Node(2, Node(3, Node(4, Node(5))))))
     actual = ll.kthFromEnd(0)
@@ -85,6 +86,7 @@ def test_eight():
     assert actual == expected
 
 # Where k and the length of the list are the same
+@pytest.mark.skip("pending")
 def test_nine():
     ll = LinkedList(Node(1, Node(2, Node(3, Node(4, Node(5))))))
     actual = ll.kthFromEnd(5)
@@ -92,6 +94,7 @@ def test_nine():
     assert actual == expected
 
 # Where k is not a positive integer
+@pytest.mark.skip("pending")
 def test_ten():
     ll = LinkedList(Node(1, Node(2, Node(3, Node(4, Node(5))))))
     actual = ll.kthFromEnd(-1)
@@ -99,6 +102,7 @@ def test_ten():
     assert actual == expected
 
 # Where the linked list is of a size 1
+@pytest.mark.skip("pending")
 def test_eleven():
     ll = LinkedList(Node(1))
     actual = ll.kthFromEnd(0)
@@ -106,8 +110,19 @@ def test_eleven():
     assert actual == expected
 
 # “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+@pytest.mark.skip("pending")
 def test_twelve():
     ll = LinkedList(Node(1, Node(2, Node(3, Node(4, Node(5))))))
     actual = ll.kthFromEnd(3)
     expected = 2
+    assert actual == expected
+
+# This checks that if code merges both linked lists into another at alternate positions
+@pytest.mark.skip("pending")
+def test_zipped_list():
+    ll1 = LinkedList(Node('1', Node('3', Node('5'))))
+    ll2 = LinkedList(Node('2', Node('4', Node('6'))))
+    zipped_list(ll1,ll2)
+    actual = ll1.__str__()
+    expected = "{'1'} -> {'2'} -> {'3'} -> {'4'} -> {'5'} -> {'6'} -> NULL"
     assert actual == expected
