@@ -64,6 +64,23 @@ class LinkedList:
         return temp.value
 
 
+def zipped_list(list1, list2):
+  list1_curr = list1.head
+  list2_curr = list2.head
+
+  while list1_curr != None and list2_curr != None:
+
+    list1_next = list1_curr.next
+    list2_next = list2_curr.next
+
+    list2_curr.next = list1_next
+    list1_curr.next = list2_curr
+
+    list1_curr = list1_next
+    list2_curr = list2_next
+  list2.head = list2_curr
+
+
 if __name__ == "__main__":
 
     ll1 = LinkedList()
