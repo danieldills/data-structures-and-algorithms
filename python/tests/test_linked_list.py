@@ -118,11 +118,11 @@ def test_twelve():
     assert actual == expected
 
 # This checks that if code merges both linked lists into another at alternate positions
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_zipped_list():
     ll1 = LinkedList(Node('1', Node('3', Node('5'))))
     ll2 = LinkedList(Node('2', Node('4', Node('6'))))
     zipped_list(ll1,ll2)
     actual = ll1.__str__()
-    expected = "{'1'} -> {'2'} -> {'3'} -> {'4'} -> {'5'} -> {'6'} -> NULL"
+    expected = "{'1'} ->{'2'} ->{'3'} ->{'4'} ->{'5'} ->{'6'} -> None "
     assert actual == expected
