@@ -22,22 +22,20 @@ class Queues:
     def dequeue(self):
 
         if self.front is None:
-            # reaise an exception
-            return None
+            raise Exception("Queue is empty")
 
-        dequed = self.front
+        dequed = self.front.value
         self.front = self.front.next
         return dequed
 
     def peek(self):
         if self.front is None:
-            return None
+            raise Exception("Queue is empty")
 
         return self.front.value
 
     def isEmpty(self):
         return self.front == None
-
 
     if __name__ == "__main__":
         pass
