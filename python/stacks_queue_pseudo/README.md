@@ -9,7 +9,7 @@ Implement a Queue using two Stacks
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![Challenge](python/assets/Challenge11.jpg)
+![Whiteboard](assets/Challenge11.jpg)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
