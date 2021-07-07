@@ -2,6 +2,12 @@
 <!-- Short summary or background information -->
 Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue
 
+[Stacks Code](python/stacks_and_queue/stacks/stacks.py)
+[Stacks Test](python/tests/test_stacks.py)
+
+[Queue Code](python/stacks_and_queue/queues/queue.py)
+[Queue Tests](python/tests/test_queue.py)
+
 ## Challenge
 <!-- Description of the challenge -->
 
