@@ -2,11 +2,11 @@
 <!-- Short summary or background information -->
 Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue
 
-[Stacks Code](stacks.py)
-[Stacks Test](tests/test_stacks.py)
+[Stacks Code](../stacks.py)
+[Stacks Test](../tests/test_stacks.py)
 
-[Queue Code](queue.py)
-[Queue Tests](tests/test_queue.py)
+[Queue Code](../queue.py)
+[Queue Tests](../tests/test_queue.py)
 
 ## Challenge
 <!-- Description of the challenge -->
