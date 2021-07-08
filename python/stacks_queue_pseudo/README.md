@@ -4,8 +4,8 @@ Implement a Queue using two Stacks
 
 ## Links
 
-  - [Code](python/stacks_queue_pseudo/stack_queue_pseudo.py)
-  - [Test](python/tests/test_stack_queue_pseudo.py)
+- [Code](stack_queue_pseudo.py)
+- [Test](tests/test_stack_queue_pseudo.py)
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
