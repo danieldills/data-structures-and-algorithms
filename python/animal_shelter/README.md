@@ -50,3 +50,10 @@ Dequeue
 
 ## Collaborations
 <!-- Show how to run your code, and examples of it in action -->
+This Code Challenge was done in collaboration with:
+
+1. Davee Sok
+2. Wondwosen
+3. Marie Marcos
+4. Prabin Singh
+5. Garfield Grant
