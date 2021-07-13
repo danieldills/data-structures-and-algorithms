@@ -1,6 +1,11 @@
-# Stack Queue Animal Shelter
+# Animal Shelter Queue
 <!-- Description of the challenge -->
-First-in, First out Animal Shelter.
+An animal shelter holds only dogs and cats, and operates on a strictly "first in, first out" basis.
+
+## Links
+
+- [See Code](animal_shelter.py)
+- [See Tests](../tests/test_animal_shelter.py)
 
 ## Feature Tasks
 
@@ -27,9 +32,21 @@ The shelter operates using a first-in, first-out approach.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
+![Animal Queue](animal_shelter.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Big O:
 
-## Solution
+Enqueue
+
+- Time: O(1)
+- Space: O(1)
+
+Dequeue
+
+- Time: O(n)
+- Space: O(1)
+
+## Collaborations
 <!-- Show how to run your code, and examples of it in action -->

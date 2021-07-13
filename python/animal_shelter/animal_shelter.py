@@ -1,9 +1,14 @@
-import copy
-
 class Node:
     def __init__(self, value=None, next=None):
         self.value = value
         self.next = next
+
+"""
+animal object =
+{
+    animal: "dog"
+}
+"""
 
 class Animal_Shelter:
     def __init__(self):
@@ -11,54 +16,51 @@ class Animal_Shelter:
         self.rear = None
         self.length = 0
 
-    def enqueue(self, obj):
-
-        node = Node(obj)
+    def enqueue(self, animal_obj):
+        node = Node(animal_obj)
 
         if self.front is None:
             self.front = node
             self.rear = node
-            return self
-
-        self.rear.next = node
-        self.rear = node
+        else:
+            self.rear.next = node
+            self.rear = node
         self.length += 1
-        return self
 
     def dequeue(self, pref):
 
         if self.front is None:
-            raise Exception("Queue is empty")
+            raise Exception("Animal Shelter is empty")
 
         if self.front.value["animal"] == pref:
-            dequed = self.front.value["animal"]
+            dequeue = self.front.value["animal"]
             self.front = self.front.next
             self.length -= 1
-            return dequed
+            return dequeue
 
-        temp_length = copy.deepcopy(self.length)
+        rotation_count = self.length
         answer = None
 
-        while temp_length >= 0:
+        while rotation_count >= 0:
             if self.front.value["animal"] == pref:
                 answer = self.front.value["animal"]
                 self.front = self.front.next
                 self.length -= 1
-                temp_length -= 1
+                rotation_count -= 1
                 break
             else:
-                dequed = self.front.value
-                dequed_node = Node(dequed)
+                dequeue = self.front.value
+                dequeued_node = Node(dequeue)
                 self.front = self.front.next
-                self.rear.next = dequed_node
-                self.rear = dequed_node
-                temp_length -= 1
+                self.rear.next = dequeued_node
+                self.rear = dequeued_node
+                rotation_count -= 1
 
-        for i in range(temp_length + 1):
-            dequed = self.front.value
-            dequed_node = Node(dequed)
+        for i in range(rotation_count):
+            dequeue = self.front.value
+            dequeued_node = Node(dequeue)
             self.front = self.front.next
-            self.rear.next = dequed_node
-            self.rear = dequed_node
+            self.rear.next = dequeued_node
+            self.rear = dequeued_node
 
         return answer
