@@ -32,9 +32,9 @@ class BinaryTree:
 
         def traverse(root):
             if root != None:
-                collection.append(root.value)
                 traverse(root.left)
                 traverse(root.right)
+                collection.append(root.value)
         return collection
 
 
