@@ -2,18 +2,18 @@ class Node:
     """
     Instantiate Node class
     """
-    def __init__(self, value):
+    def __init__(self, value=None, left=None, right=None):
         self.value = value
-        self.left = None
-        self.right = None
+        self.left = left
+        self.right = right
 
 class BinaryTree:
     """
     Create a Binary Tree class; Define a method for each of the depth first traversals: pre-order, in-order, post-order
     """
 
-    def __init__(self):
-        self.root = None
+    def __init__(self, node=None):
+        self.root = node
 
     def pre_order(self):
         # root >> left >> right
@@ -26,8 +26,20 @@ class BinaryTree:
                 traverse(root.right)
         return collection
 
-    def in_order():
+    def in_order(self):
         # left >> root >> right
+        collection = []
+
+        def traverse(root):
+            if root != None:
+                traverse(root.left)
+                collection.append(root.value)
+                traverse(root.right)
+        traverse(self.root)
+        return collection
+
+    def post_order(self):
+        # left >> right >> root
         collection = []
 
         def traverse(root):
@@ -35,14 +47,8 @@ class BinaryTree:
                 traverse(root.left)
                 traverse(root.right)
                 collection.append(root.value)
+        traverse(self.root)
         return collection
-
-
-    def post_order():
-        # left >> right >> root
-        pass
-
-
 
 
 class BinarySearchTree(BinaryTree):
@@ -50,8 +56,46 @@ class BinarySearchTree(BinaryTree):
     Create Binary Search Tree class; this is a sub-class of the Binary Tree Class, with additional methods: Add, Contains
     """
 
-    def add():
-        pass
+    def add(self, value):
+        node = Node(value)
 
-    def contains():
-        pass
+        if self.root is None:
+            self.root = node
+            return self
+
+        current = self.root
+
+        while(current):
+
+            if value == current.value:
+                raise Exception("Value already exists")
+
+            if value > current.value:
+                if current.right is None:
+                    current.right = node
+                    return self
+                current = current.right
+
+            else:
+                if current.left is None:
+                    current.left = node
+                    return self
+                current = current.left
+
+    def contains(self, target):
+        if self.root is None:
+            return None
+
+        current = self.root
+
+        while current:
+
+            if current.value == target:
+                return True
+
+            if target > current.value:
+                current = current.right
+            else:
+                current = current.left
+
+        return False
