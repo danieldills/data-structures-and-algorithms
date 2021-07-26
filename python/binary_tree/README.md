@@ -39,5 +39,6 @@ Binary Search Tree
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-## API
+## Credit & Collaborations
 <!-- Description of each method publicly available in each of your trees -->
+Worked on Code Challenge with Davee, Prabin, Wondwosen.
