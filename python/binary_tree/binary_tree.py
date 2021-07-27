@@ -25,6 +25,7 @@ class BinaryTree:
                 collection.append(root.value)
                 traverse(root.left)
                 traverse(root.right)
+        traverse(self.root)
         return collection
 
     def in_order(self):
@@ -51,7 +52,7 @@ class BinaryTree:
     #     traverse(self.root)
     #     return max(collection)
 
-    def max_value(self, max_num=0):
+    def max_value(self):
         # left >> root >> right
 
         def traverse(root):

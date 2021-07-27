@@ -66,7 +66,7 @@ def test_max_value_tree(new_tree):
     assert actual == expected
 
 # @pytest.mark.skip("pending")
-def test_max_value_tree(new_tree):
+def test_max_value_tree_fail(new_tree):
     actual = new_tree.max_value()
     expected = 15
     assert actual != expected
