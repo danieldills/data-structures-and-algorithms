@@ -36,8 +36,9 @@ Binary Search Tree
       - Argument: value
       - Returns: boolean indicating whether or not the value is in the tree at least once.
 
-## Approach & Efficiency
+## Whitebaord
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+![max_value](max_value_binary_tree.png)
 
 ## Credit & Collaborations
 <!-- Description of each method publicly available in each of your trees -->

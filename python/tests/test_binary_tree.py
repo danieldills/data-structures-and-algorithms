@@ -37,6 +37,7 @@ def test_create_binary_search_tree():
     tree = BinarySearchTree()
     assert tree
 
+# @pytest.mark.skip("pending")
 def test_add_method_will_add_to_tree():
     tree = BinarySearchTree()
     tree.add(10)
@@ -46,25 +47,42 @@ def test_add_method_will_add_to_tree():
     assert tree.root.right.value == 15
     assert tree.root.left.value == 5
 
+# @pytest.mark.skip("pending")
 def test_pre_order_will_return_correct_values(new_tree):
     actual = new_tree.pre_order()
     expected = [20, 15, 12, 17, 25, 23, 28]
     actual == expected
 
+# @pytest.mark.skip("pending")
 def test_pre_in_order_will_return_correct_values(new_tree):
     actual = new_tree.in_order()
     expected = [12, 15, 17, 20, 23, 25, 28]
     assert actual == expected
 
+# @pytest.mark.skip("pending")
+def test_max_value_tree(new_tree):
+    actual = new_tree.max_value()
+    expected = 28
+    assert actual == expected
+
+# @pytest.mark.skip("pending")
+def test_max_value_tree(new_tree):
+    actual = new_tree.max_value()
+    expected = 15
+    assert actual != expected
+
+# @pytest.mark.skip("pending")
 def test_post_order_will_return_correct_values(new_tree):
     actual = new_tree.post_order()
     expected = [12, 17, 15, 23, 28, 25, 20]
     assert actual == expected
 
+# @pytest.mark.skip("pending")
 def test_contains_method_will_return_true_for_present_value(new_tree):
     actual = new_tree.contains(23)
     assert actual == True
 
+# @pytest.mark.skip("pending")
 def test_contains_method_will_return_false_for_present_value(new_tree):
     actual = new_tree.contains(40)
     assert actual == False
