@@ -12,8 +12,9 @@ class BinaryTree:
     Create a Binary Tree class; Define a method for each of the depth first traversals: pre-order, in-order, post-order
     """
 
-    def __init__(self, node=None):
+    def __init__(self, node=None, max_num=0):
         self.root = node
+        self.max_num = max_num
 
     def pre_order(self):
         # root >> left >> right
@@ -37,6 +38,30 @@ class BinaryTree:
                 traverse(root.right)
         traverse(self.root)
         return collection
+
+    # def max_value(self):
+    #     # left >> root >> right
+    #     collection = []
+
+    #     def traverse(root):
+    #         if root != None:
+    #             traverse(root.left)
+    #             collection.append(root.value)
+    #             traverse(root.right)
+    #     traverse(self.root)
+    #     return max(collection)
+
+    def max_value(self, max_num=0):
+        # left >> root >> right
+
+        def traverse(root):
+            if root != None:
+                traverse(root.left)
+                if self.max_num < root.value:
+                    self.max_num = root.value
+                traverse(root.right)
+        traverse(self.root)
+        return self.max_num
 
     def post_order(self):
         # left >> right >> root
