@@ -20,7 +20,7 @@ def test_breadth_first_can_display_correct_order():
     tree1 = BinarySearchTree()
     input1 = [10, 15, 8, 6, 14, 20]
     for item in input1:
-        tree1.addIteravily(item)
+        tree1.add(item)
     actual = breadth_first(tree1)
     expected = [10, 8, 15, 6, 14, 20]
     assert actual == expected
@@ -28,7 +28,7 @@ def test_breadth_first_can_display_correct_order():
 
 def test_breadth_first_can_account_for_one_node():
     tree1 = BinarySearchTree()
-    tree1.addIteravily(7)
+    tree1.add(7)
     actual = breadth_first(tree1)
     assert actual == [7]
 

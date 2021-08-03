@@ -1,24 +1,23 @@
-from typing import Collection
-from stacks_and_queue.queues import Queue
+from stacks_and_queue.queues.queue import Queues
 
 def breadth_first(tree):
 
     if tree.root is None:
         return []
 
-    queueu = Queue()
-    queueu.enqueue(tree.root)
+    queue = Queues()
+    queue.enqueue(tree.root)
     collection = []
 
-    while not queueu.isEmpty():
+    while not queue.isEmpty():
 
-        front = queueu.dequeue()
+        front = queue.dequeue()
 
         if front.left:
-            queueu.enqueue(front.left)
+            queue.enqueue(front.left)
 
         if front.right:
-            queueu.enqueue(front.right)
+            queue.enqueue(front.right)
 
         collection.append(front.value)
 
