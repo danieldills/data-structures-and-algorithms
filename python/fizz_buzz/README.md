@@ -6,7 +6,7 @@ Set the values of each of the new nodes depending on the corresponding node valu
 
 ## White Board Process
 
-![fizz buzz tree](tree-fizz-buzz)
+![fizz buzz tree](tree-fizz-buzz.jpg)
 
 ## Credit & Collaborations
 
