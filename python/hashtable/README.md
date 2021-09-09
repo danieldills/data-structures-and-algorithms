@@ -42,4 +42,4 @@ Write tests to prove the following functionality:
 
 ## Credit & Collaborations
 
-[Davee Sok](https://github.com/daveeS987)
+[Prabin Singh](https://github.com/prabin544), [Davee Sok](https://github.com/daveeS987), [Wondwosen](https://github.com/WondwosenTsige)
