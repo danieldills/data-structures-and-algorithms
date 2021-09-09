@@ -4,6 +4,7 @@ Write a function called repeated word that finds the first word to occur more th
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
+![First Repeated Word](first_repeated_word.jpg)
 
 ## Feature Tasks
 
@@ -13,4 +14,4 @@ Write a function called repeated word that finds the first word to occur more th
 
 ## Collaborations
 
-[Davee Sok](https://github.com/daveeS987)
+[Prabin Singh](https://github.com/prabin544), [Davee Sok](https://github.com/daveeS987), [Wondwosen](https://github.com/WondwosenTsige)
