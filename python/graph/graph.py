@@ -9,6 +9,7 @@ class Graph:
         Returns: The added node
         Add a node to the graph
         """
+        # v = Vertex(value)
         self._adjacency_list[node] = []
         return node
 
@@ -55,12 +56,10 @@ class Graph:
         """
         return len(self._adjacency_list)
 
+
 class Vertex:
     def __init__(self, value=None):
         self.value = value
-
-    def __str__(self):
-        return self.value
 
 
 class Edge:
