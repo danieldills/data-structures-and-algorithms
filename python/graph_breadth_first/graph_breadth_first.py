@@ -1,8 +1,8 @@
-from stacks_and_queue.queues.queue import Node, Queue
+from stacks_and_queue.queues.queue import Queue
 
 
 def graph_breadth_first(vertex):
-    nodes = {}
+    nodes = []
     breadth = Queue()
     visited = set()
 
@@ -12,10 +12,10 @@ def graph_breadth_first(vertex):
     while not breadth.isEmpty():
         front = breadth.dequeue()
         nodes.append(front)
-        children =
 
-        for child in front.children:
-            if child not in visited:
-                visited.append(child)
-                breadth.enqueue(child)
-    return visited
+        for neighbor in front.neighbor:
+            if neighbor.vertex not in visited:
+                visited.append(neighbor)
+                breadth.enqueue(neighbor)
+
+    return nodes

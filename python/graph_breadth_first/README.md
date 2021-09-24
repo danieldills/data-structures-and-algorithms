@@ -22,4 +22,4 @@ Write the following method for the Graph class:
 
 ### Credit & Collaborations
 
-[Prabin Singh](https://github.com/prabin544), [Davee Sok](https://github.com/daveeS987), [Wondwosen](https://github.com/WondwosenTsige), [Marie Marcos](https://github.com/Mmarcos01)
+[Prabin Singh](https://github.com/prabin544), [Davee Sok](https://github.com/daveeS987), [Wondwosen](https://github.com/WondwosenTsige), [Marie Marcos](https://github.com/Mmarcos01), [Garfield Grant](https://github.com/Marleyman876)
