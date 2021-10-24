@@ -1,90 +1,183 @@
 class Node:
-
-    def __init__(self, value, next=None):
+    def __init__(self, value=None, next=None):
         self.value = value
         self.next = next
 
-class LinkedList:
 
-    def __init__(self, head=None):
-        self.head = head
+class LinkedList:
+    def __init__(self, node=None):
+        self.head = node
 
     def insert(self, value):
-
         node = Node(value)
+
         node.next = self.head
         self.head = node
         return self
 
-    def includes(self, value):
-
+    def includes(self, target):
         current = self.head
 
-        while current is not None:
-            if current.value == value:
+        while current:
+            if current.value == target:
                 return True
             current = current.next
         return False
 
     def __str__(self):
-
         string = ""
+
+        current = self.head
+        while current:
+            string += f"{ {current.value} } -> "
+            current = current.next
+
+        string += " None "
+        return string
+
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            return self
+        current = self.head
+        while current.next is not None:
+            current = current.next
+        current.next = new_node
+        return self
+
+    def insert_before(self, target, new_value):
+        new_node = Node(new_value)
+
+        if self.head is None:
+            return None
+
+        if self.head.value == target:
+            new_node.next = self.head
+            self.head = new_node
+            return self
 
         current = self.head
 
         while current is not None:
-            string += f"{ {current.value} } ->"
+            if current.next.value == target:
+                new_node.next = current.next
+                current.next = new_node
+                return self
             current = current.next
 
-        string += f" None "
+        print("Target not within list")
 
-        return string
+    def insert_after(self, target, new_value):
 
-# https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
-    def kthFromEnd(self, k):
-        temp = self.head
-        length = 0
+        new_node = Node(new_value)
 
-        while temp is not None:
-            temp = temp.next
-            length += 1
+        if self.head is None:
+            return None
 
-        #print count
-        if k > length: # if entered location is greater than length of LL
-            return 'Location is greater than the length of LL'
-        if k == length:
-            return 'Same length'
+        current = self.head
+
+        while current is not None:
+            if current.value == target:
+                new_node.next = current.next
+                current.next = new_node
+                return self
+            current = current.next
+
+        print("Target not within list")
+
+    def kth_from_the_end(self, k):
+
         if k < 0:
-            return 'Negative numbers not allowed'
+            return "K is negative"
 
-        temp = self.head
-        for i in range(1, length - k):
-            temp = temp.next
+        if self.head is None:
+            return None
 
-        return temp.value
+        count = 0
+        current = self.head
+
+        while current:
+            count += 1
+            current = current.next
+
+        if count < k:
+            return "K is larger than linked list"
+
+        current = self.head
+        count = count - k
+
+        while count > 1:
+            current = current.next
+            count -= 1
+
+        return current.value
 
 
-def zipped_list(list1, list2):
-  list1_curr = list1.head
-  list2_curr = list2.head
+def linked_list_zip(linklist1, linklist2):
 
-  while list1_curr != None and list2_curr != None:
+    if linklist1.head is None and linklist2.head is None:
+        return None
 
-    list1_next = list1_curr.next
-    list2_next = list2_curr.next
+    if linklist1.head is None:
+        return linklist2
 
-    list2_curr.next = list1_next
-    list1_curr.next = list2_curr
+    if linklist2.head is None:
+        return linklist1
 
-    list1_curr = list1_next
-    list2_curr = list2_next
-  list2.head = list2_curr
+    l1cur = linklist1.head
+    l1next = l1cur.next
+    l2cur = linklist2.head
+    l2next = l2cur.next
+
+    while l1next and l2next:
+        l1cur.next = l2cur
+        l2cur.next = l1next
+        l1cur = l1next
+        l2cur = l2next
+        l1next = l1next.next
+        l2next = l2next.next
+
+    if l1next is None and l2next is None:
+        l1cur.next = l2cur
+    elif l1next is not None:
+        l1cur.next = l2cur
+        l2cur.next = l1next
+    elif l2next is not None:
+        l2cur.next = l2cur
+    return linklist1
+
+
+def get_duplicate_count(link1, link2):
+
+    if link1.head is None or link2.head is None:
+        return 0
+
+    storage = {}
+    current1 = link1.head
+
+    while current1 is not None:
+        if storage[current1.value]:
+            storage += 1
+        else:
+            storage[current1.value] = 1
+
+    count = 0
+    current2 = link2.head
+
+    while current2 is not None:
+        if storage[current2.value]:
+            count += 1
+        current2 = current2.next
+
+    return count
 
 
 if __name__ == "__main__":
 
-    ll1 = LinkedList()
-    ll1.insert("a").insert("b").insert("c").insert("d")
+    llist = LinkedList()
+    llist.append("a").append("b").append("c").append("d").append("e")
 
-    result = str(ll1)
-    print(result)
+    print(str(llist))
+
+    pass
