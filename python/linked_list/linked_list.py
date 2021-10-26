@@ -144,7 +144,7 @@ def linked_list_zip(linklist1, linklist2):
         l1cur.next = l2cur
         l2cur.next = l1next
     elif l2next is not None:
-        l2cur.next = l2cur
+        l1cur.next = l2cur
     return linklist1
 
 
